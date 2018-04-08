@@ -2,6 +2,8 @@
 
 [![Travis-CI Build Status](https://travis-ci.org/JohnCoene/datamaps.svg?branch=master)](https://travis-ci.org/JohnCoene/datamaps)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/JohnCoene/datamaps?branch=master&svg=true)](https://ci.appveyor.com/project/JohnCoene/datamaps)
+[![CRAN](https://img.shields.io/cran/v/datamaps.svg)](https://img.shields.io/cran/v/datamaps.svg)
+[![CRAN_Status_Badge](http://cranlogs.r-pkg.org/badges/grand-total/datamaps)](http://cranlogs.r-pkg.org/badges/grand-total/datamaps)
 
 ![datamaps](http://john-coene.com/img/datamaps_proxy.gif)
 
@@ -12,18 +14,23 @@ R htmlwidget for [datamaps](http://datamaps.github.io/), plot choropleth, overla
 * [Examples](#examples)
 * [Shiny Proxies](#shiny-proxies)
 * [Proxies demo](http://shiny.john-coene.com/datamaps/)
+* [Website](http://john-coene.com/datamaps)
 
 ## Installation
 
 ```R
-# install.packages("devtools")
+# CRAN release
+install.packages("datamaps")
+
+# Development version
 devtools::install_github("JohnCoene/datamaps")
 ```
 
 ## Info
 
-* See [website](http://john-coene.com/datamaps) for demos. 
+* See [website](http://datamaps.john-coene.com/) for demos. 
 * Includes proxies to update the visualisation without re-drawing entire map.
+* See NEWS.md for new features and bug fixes
 
 ## Shiny Proxies
 
@@ -39,7 +46,7 @@ devtools::install_github("JohnCoene/datamaps")
 
 Example proxy.
 
-[demo](http://shiny.john-coene.com/datamaps/)
+### [demo](http://shiny.john-coene.com/datamaps/)
 
 ```R
 library(shiny)

@@ -21,13 +21,11 @@
 #'
 #' @rdname datamaps
 #' @export
-datamaps <- function(data, scope = "world", default = "#ABDDA4", projection = "equirectangular", responsive = FALSE, width = NULL,
-                     height = NULL, elementId = NULL) {
+datamaps <- function(data, scope = "world", default = "#ABDDA4", projection = "equirectangular", responsive = TRUE, width = "100%",
+                     height = "100%", elementId = NULL) {
 
   if(!missing(data))
     assign("data", data, envir = data_env)
-
-  if(!tolower(scope) %in% c("usa", "world")) stop("incorrect scope, see details", call. = FALSE)
 
   # forward options using x
   x = list(
@@ -35,8 +33,8 @@ datamaps <- function(data, scope = "world", default = "#ABDDA4", projection = "e
     scope = tolower(scope),
     projection = projection,
     fills = list(defaultFill = default),
-    geographyConfig = list(dataUrl = NULL)
-    #,bubblesConfig = list(key = "JSON.stringify")
+    geographyConfig = list(dataUrl = NULL),
+    setProjection = NULL
   )
 
   attr(x, 'TOJSON_ARGS') <- list(keep_vec_names = TRUE)
@@ -48,7 +46,12 @@ datamaps <- function(data, scope = "world", default = "#ABDDA4", projection = "e
     width = width,
     height = height,
     package = 'datamaps',
-    elementId = elementId
+    elementId = elementId,
+    sizingPolicy = htmlwidgets::sizingPolicy(
+      viewer.padding = 0,
+      defaultWidth = "100%",
+      browser.fill = TRUE
+    )
   )
 }
 
