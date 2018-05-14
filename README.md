@@ -5,7 +5,7 @@
 [![CRAN](https://img.shields.io/cran/v/datamaps.svg)](https://img.shields.io/cran/v/datamaps.svg)
 [![CRAN_Status_Badge](http://cranlogs.r-pkg.org/badges/grand-total/datamaps)](http://cranlogs.r-pkg.org/badges/grand-total/datamaps)
 
-![datamaps](http://john-coene.com/img/datamaps_proxy.gif)
+![proxies](https://raw.githubusercontent.com/JohnCoene/projects/master/img/datamaps_proxy.gif)
 
 R htmlwidget for [datamaps](http://datamaps.github.io/), plot choropleth, overlay arcs and bubbles, customise options, easily interact with Shiny proxies.
 
@@ -14,7 +14,7 @@ R htmlwidget for [datamaps](http://datamaps.github.io/), plot choropleth, overla
 * [Examples](#examples)
 * [Shiny Proxies](#shiny-proxies)
 * [Proxies demo](http://shiny.john-coene.com/datamaps/)
-* [Website](http://john-coene.com/datamaps)
+* [Website](http://datamaps.john-coene.com)
 
 ## Installation
 
@@ -25,6 +25,8 @@ install.packages("datamaps")
 # Development version
 devtools::install_github("JohnCoene/datamaps")
 ```
+
+Development version includes 2 plugins, `add_icons` and `add_markers`.
 
 ## Info
 
